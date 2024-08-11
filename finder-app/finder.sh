@@ -22,9 +22,10 @@ then
     exit 1
 fi
 
-NUMFILES=$(ls $filesdir -1 | wc -l)
+NUM_FILES=$(ls $filesdir -1 | wc -l)
 #NUMFILES=$(find $filesdir -maxdepth 2 -type f)
+NUM_MATCH_LINES=$(grep -r "${searchstr}" $filesdir | wc -l)
 
-echo -e "The number of files are $NUMFILES and the number of matching lines are $NUMFILES"
+echo -e "The number of files are $NUM_FILES and the number of matching lines are $NUM_MATCH_LINES."
 
 # vim: tabstop=4 shiftwidth=4 expandtab

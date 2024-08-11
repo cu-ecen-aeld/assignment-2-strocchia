@@ -16,9 +16,9 @@ searchstr=$2
 #echo -e $filesdir
 #echo -e $searchstr
 
-if [ ! -d "$1" ]
+if [ ! -d "$filesdir" ]
 then
-    echo -e "  finder.sh-->\t$1 is an invalid directory structure. exiting..."
+    echo -e "  finder.sh-->\t$filesdir is an invalid directory structure. exiting..."
     exit 1
 fi
 
